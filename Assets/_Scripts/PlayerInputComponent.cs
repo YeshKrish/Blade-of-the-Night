@@ -1,7 +1,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
 
-namespace BaldeOfNight
+namespace BladeOfNight
 {
     public class PlayerInputComponent : MonoBehaviour
     {

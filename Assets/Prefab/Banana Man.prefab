@@ -859,7 +859,7 @@ Animator:
   m_GameObject: {fileID: 2282359365335160768}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 81bb9eea30387e442899949a80011e55, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0fb596d6179d5d94ca991ae5974c39e2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -887,7 +887,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.89, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &4832911405403643310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136f4390b252858478cc3d884865323d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
+  Controller: {fileID: 11400000, guid: 50cb13cf8a5b1b84088fcfe6877b49bb, type: 2}
   MovementSettings:
     Acceleration: 25
     Decceleration: 25

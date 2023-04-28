@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BaldeOfNight
+namespace BladeOfNight
 {
     public enum ERotationBehavior
     {
@@ -82,7 +82,7 @@ namespace BaldeOfNight
         private void Awake()
         {
             Controller.Init();
-            Controller.character = this;
+            Controller.Character = this;
 
             _characterController = GetComponent<CharacterController>();
             _characterAnimator = GetComponent<CharacterAnimator>();

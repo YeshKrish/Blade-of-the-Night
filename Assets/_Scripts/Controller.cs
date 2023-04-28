@@ -1,10 +1,10 @@
 using UnityEngine;
 
-namespace BaldeOfNight
+namespace BladeOfNight
 {
     public abstract class Controller : ScriptableObject
     {
-        public Character character { get; set; }
+        public Character Character { get; set; }
 
         public abstract void Init();
         public abstract void OnCharacterUpdate();

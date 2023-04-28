@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BaldeOfNight
+namespace BladeOfNight
 {
     public static class CharacterAnimatorParamId
     {
