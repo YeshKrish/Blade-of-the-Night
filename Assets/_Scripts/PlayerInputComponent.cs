@@ -14,7 +14,7 @@ namespace BladeOfNight
         public void OnMoveEvent(InputAction.CallbackContext context)
         {
             Vector2 moveInput = context.ReadValue<Vector2>();
-
+            print(moveInput);
             bool hasMoveInput = moveInput.sqrMagnitude > 0.0f;
             if (HasMoveInput && !hasMoveInput)
             {

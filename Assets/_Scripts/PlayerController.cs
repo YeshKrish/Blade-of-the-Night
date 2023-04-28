@@ -12,6 +12,7 @@ namespace BladeOfNight
 
         public override void Init()
         {
+            Debug.Log("Player Controller INIT");
             _playerInput = FindObjectOfType<PlayerInputComponent>();
             //_playerCamera = FindObjectOfType<PlayerCamera>();
         }
@@ -53,7 +54,7 @@ namespace BladeOfNight
             Vector3 forward = yawRotation * Vector3.forward;
             Vector3 right = yawRotation * Vector3.right;
             Vector3 movementInput = (forward * _playerInput.MoveInput.y + right * _playerInput.MoveInput.x);
-
+            Debug.Log(movementInput);
             if (movementInput.sqrMagnitude > 1f)
             {
                 movementInput.Normalize();
