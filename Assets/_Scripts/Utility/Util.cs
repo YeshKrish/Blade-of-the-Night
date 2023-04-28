@@ -30,6 +30,7 @@ namespace BladeOfNight
         {
             return Multiply(vec, other.x, other.y, other.z);
         }
+
         public static Vector3 Clamp(this Vector3 vec, Vector3 min, Vector3 max)
         {
             vec.x = Mathf.Clamp(vec.x, min.x, max.x);
@@ -38,6 +39,7 @@ namespace BladeOfNight
 
             return vec;
         }
+
         public static float Remap(this float f, float fromMin, float fromMax, float toMin, float toMax)
         {
             float t = (f - fromMin) / (fromMax - fromMin);

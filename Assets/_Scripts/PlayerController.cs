@@ -61,6 +61,6 @@ namespace BladeOfNight
 
             return movementInput;
         }
-    }
 
+    }
 }

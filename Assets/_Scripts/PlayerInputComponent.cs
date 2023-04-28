@@ -7,6 +7,7 @@ namespace BladeOfNight
     {
         public Vector2 MoveInput { get; private set; }
         public Vector2 LastMoveInput { get; private set; }
+        public Vector2 CameraInput { get; private set; }
         public bool JumpInput { get; private set; }
         public bool HasMoveInput { get; private set; }
 
@@ -15,13 +16,18 @@ namespace BladeOfNight
             Vector2 moveInput = context.ReadValue<Vector2>();
 
             bool hasMoveInput = moveInput.sqrMagnitude > 0.0f;
-            if(HasMoveInput && !hasMoveInput)
+            if (HasMoveInput && !hasMoveInput)
             {
-                LastMoveInput = moveInput;
+                LastMoveInput = MoveInput;
             }
 
             MoveInput = moveInput;
             HasMoveInput = hasMoveInput;
+        }
+
+        public void OnLookEvent(InputAction.CallbackContext context)
+        {
+            CameraInput = context.ReadValue<Vector2>();
         }
 
         public void OnJumpEvent(InputAction.CallbackContext context)

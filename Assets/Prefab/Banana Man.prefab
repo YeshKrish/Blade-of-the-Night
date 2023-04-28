@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 7581349924690715042}
   - component: {fileID: 4832911405403643310}
   - component: {fileID: 5467490255385224984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banana Man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 81bb9eea30387e442899949a80011e55, type: 3}
   m_Controller: {fileID: 9100000, guid: 0fb596d6179d5d94ca991ae5974c39e2, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
   GroundSettings:
     GroundLayers:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 1
     SphereCastRadius: 0.35
     SphereCastDistance: 0.15
 --- !u!114 &5467490255385224984

@@ -511,6 +511,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1286839335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286839337}
+  - component: {fileID: 1286839336}
+  m_Layer: 0
+  m_Name: Helper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1286839336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286839335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1471fe030ee16194aa6f48c7339ed370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SlowMotionAction:
+    m_Name: Slow Motion
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 837ca63d-1612-4720-b4f9-c1fffaf0105e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _targetFrameRate: 60
+  _slowMotion: 0.1
+--- !u!4 &1286839337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286839335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614973026
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,54 +918,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana Man
       objectReference: {fileID: 0}
-    - target: {fileID: 4757892168572147456, guid: 49c84c6793ed4584a8cc70d01e8b8740,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c84c6793ed4584a8cc70d01e8b8740, type: 3}
---- !u!1 &1400047815083010777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2282359365335160768, guid: 49c84c6793ed4584a8cc70d01e8b8740,
-    type: 3}
-  m_PrefabInstance: {fileID: 1400047815083010776}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1400047815083010778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400047815083010777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 136f4390b252858478cc3d884865323d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
-  MovementSettings:
-    Acceleration: 25
-    Decceleration: 25
-    MaxHorizontalSpeed: 8
-    JumpSpeed: 10
-    JumpAbortSpeed: 10
-  GravitySettings:
-    Gravity: 20
-    GroundedGravity: 5
-    MaxFallSpeed: 40
-  RotationSettings:
-    MinPitchAngle: -45
-    MaxPitchAngle: 75
-    RotationBehavior: 0
-    MinRotationSpeed: 600
-    MaxRotationSpeed: 1200
-  GroundSettings:
-    GroundLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    SphereCastRadius: 0.35
-    SphereCastDistance: 0.15
 --- !u!4 &1400047815083010783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1506244534875901306, guid: 49c84c6793ed4584a8cc70d01e8b8740,

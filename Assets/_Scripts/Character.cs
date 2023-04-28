@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BladeOfNight
@@ -13,15 +11,14 @@ namespace BladeOfNight
     [System.Serializable]
     public class RotationSettings
     {
-        [Header("ControlRotation")]
+        [Header("Control Rotation")]
         public float MinPitchAngle = -45.0f;
         public float MaxPitchAngle = 75.0f;
 
-        [Header("CharacterOrientation")]
+        [Header("Character Orientation")]
         public ERotationBehavior RotationBehavior = ERotationBehavior.OrientRotationToMovement;
         public float MinRotationSpeed = 600.0f; // The turn speed when the player is at max speed (in degrees/second)
         public float MaxRotationSpeed = 1200.0f; // The turn speed when the player is stationary (in degrees/second)
-
     }
 
     [System.Serializable]
@@ -43,7 +40,7 @@ namespace BladeOfNight
     }
 
     [System.Serializable]
-    public class GroundSetting
+    public class GroundSettings
     {
         public LayerMask GroundLayers; // Which layers are considered as ground
         public float SphereCastRadius = 0.35f; // The radius of the sphere cast for the grounded check
@@ -52,18 +49,18 @@ namespace BladeOfNight
 
     public class Character : MonoBehaviour
     {
-        public Controller Controller;
+        public Controller Controller; // The controller that controls the character
         public MovementSettings MovementSettings;
         public GravitySettings GravitySettings;
         public RotationSettings RotationSettings;
-        public GroundSetting GroundSettings;
+        public GroundSettings GroundSettings;
 
-        private CharacterController _characterController;
+        private CharacterController _characterController; // The Unity's CharacterController
         private CharacterAnimator _characterAnimator;
 
-        private float _targetHorizontalSpeed;
-        private float _horizontalSpeed;
-        private float _verticalSpeed;
+        private float _targetHorizontalSpeed; // In meters/second
+        private float _horizontalSpeed; // In meters/second
+        private float _verticalSpeed; // In meters/second
         private bool _justWalkedOffALedge;
 
         private Vector2 _controlRotation; // X (Pitch), Y (Yaw)
@@ -73,10 +70,8 @@ namespace BladeOfNight
         private bool _jumpInput;
 
         public Vector3 Velocity => _characterController.velocity;
-
         public Vector3 HorizontalVelocity => _characterController.velocity.SetY(0.0f);
         public Vector3 VerticalVelocity => _characterController.velocity.Multiply(0.0f, 1.0f, 0.0f);
-
         public bool IsGrounded { get; private set; }
 
         private void Awake()
@@ -88,7 +83,7 @@ namespace BladeOfNight
             _characterAnimator = GetComponent<CharacterAnimator>();
         }
 
-        void Update()
+        private void Update()
         {
             Controller.OnCharacterUpdate();
         }
@@ -113,6 +108,7 @@ namespace BladeOfNight
 
             _characterAnimator.UpdateState();
         }
+
         public void SetMovementInput(Vector3 movementInput)
         {
             bool hasMovementInput = movementInput.sqrMagnitude > 0.0f;
@@ -125,6 +121,7 @@ namespace BladeOfNight
             _movementInput = movementInput;
             _hasMovementInput = hasMovementInput;
         }
+
         private Vector3 GetMovementInput()
         {
             Vector3 movementInput = _hasMovementInput ? _movementInput : _lastMovementInput;
@@ -135,14 +132,17 @@ namespace BladeOfNight
 
             return movementInput;
         }
+
         public void SetJumpInput(bool jumpInput)
         {
             _jumpInput = jumpInput;
         }
+
         public Vector2 GetControlRotation()
         {
             return _controlRotation;
         }
+
         public void SetControlRotation(Vector2 controlRotation)
         {
             // Adjust the pitch angle (X Rotation)
@@ -156,6 +156,7 @@ namespace BladeOfNight
 
             _controlRotation = new Vector2(pitchAngle, yawAngle);
         }
+
         private bool CheckGrounded()
         {
             Vector3 spherePosition = transform.position;
@@ -164,6 +165,7 @@ namespace BladeOfNight
 
             return isGrounded;
         }
+
         private void UpdateGrounded()
         {
             _justWalkedOffALedge = false;
@@ -176,6 +178,7 @@ namespace BladeOfNight
 
             IsGrounded = isGrounded;
         }
+
         private void UpdateHorizontalSpeed(float deltaTime)
         {
             Vector3 movementInput = _movementInput;
@@ -189,6 +192,7 @@ namespace BladeOfNight
 
             _horizontalSpeed = Mathf.MoveTowards(_horizontalSpeed, _targetHorizontalSpeed, acceleration * deltaTime);
         }
+
         private void UpdateVerticalSpeed(float deltaTime)
         {
             if (IsGrounded)
@@ -215,6 +219,7 @@ namespace BladeOfNight
                 _verticalSpeed = Mathf.MoveTowards(_verticalSpeed, -GravitySettings.MaxFallSpeed, GravitySettings.Gravity * deltaTime);
             }
         }
+
         private void OrientToTargetRotation(Vector3 horizontalMovement, float deltaTime)
         {
             if (RotationSettings.RotationBehavior == ERotationBehavior.OrientRotationToMovement && horizontalMovement.sqrMagnitude > 0.0f)
@@ -231,7 +236,6 @@ namespace BladeOfNight
                 transform.rotation = targetRotation;
             }
         }
-
     }
 }
 
