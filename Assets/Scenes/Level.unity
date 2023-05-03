@@ -201,8 +201,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.16669492, y: -0.34901616, z: 0.06323823, w: 0.9200008}
-  m_LocalPosition: {x: 1.8633219, y: 2.8525836, z: -2.1024032}
+  m_LocalRotation: {x: 0.22663018, y: 1e-45, z: 0, w: 0.9739809}
+  m_LocalPosition: {x: -1e-44, y: 2.804401, z: -2.6918325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 1400047815083010777}
   m_Follow: {fileID: 1400047815083010777}
   m_Lens:
     FieldOfView: 67.7
@@ -338,8 +338,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401924417}
-  m_LocalRotation: {x: 0.16669492, y: -0.34901616, z: 0.06323823, w: 0.9200008}
-  m_LocalPosition: {x: 1.8633219, y: 2.8525836, z: -2.1024032}
+  m_LocalRotation: {x: 0.22663018, y: 1e-45, z: 0, w: 0.9739809}
+  m_LocalPosition: {x: -1e-44, y: 2.804401, z: -2.6918325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 1.3, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 0.98, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: -10.1, z: 22.52}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -1152,6 +1152,36 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4832911405403643310, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_Id
+      value: bbbe8ce0-302c-41f8-9eca-944e2a4d2d1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832911405403643310, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_Name
+      value: Combo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832911405403643310, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832911405403643310, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: db0745ef-efcc-4030-90db-266ad5ba4708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832911405403643310, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/e
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832911405403643310, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Combo
+      objectReference: {fileID: 0}
     - target: {fileID: 5251308802152986474, guid: 49c84c6793ed4584a8cc70d01e8b8740,
         type: 3}
       propertyPath: m_Layer
@@ -1161,6 +1191,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: _comboAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: 7cd883ae9b6a18745ac284ed98816af3, type: 2}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_Id
+      value: 9d29713c-8d82-4f96-850f-4ad703108580
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_Name
+      value: Combo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: af5ae9b9-4694-44ea-a787-487dbafb2883
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467490255385224984, guid: 49c84c6793ed4584a8cc70d01e8b8740,
+        type: 3}
+      propertyPath: ComboAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Combo
       objectReference: {fileID: 0}
     - target: {fileID: 5707646229878541731, guid: 49c84c6793ed4584a8cc70d01e8b8740,
         type: 3}

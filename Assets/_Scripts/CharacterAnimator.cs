@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Threading.Tasks;
 
 namespace BladeOfNight
 {
@@ -13,11 +15,27 @@ namespace BladeOfNight
     {
         private Animator _animator;
         private Character _character;
+        public InputAction ComboAction;
+
+        [SerializeField]
+        private AnimationClip _comboAnimation;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
             _character = GetComponent<Character>();
+        }
+
+        private void OnEnable()
+        {
+            ComboAction.Enable();
+            ComboAction.started += PerformCombo;
+        }
+
+        private void OnDisable()
+        {
+            ComboAction.Disable();
+            ComboAction.started -= PerformCombo;
         }
 
         public void UpdateState()
@@ -30,6 +48,21 @@ namespace BladeOfNight
             _animator.SetFloat(CharacterAnimatorParamId.VerticalSpeed, normVerticalSpeed);
 
             _animator.SetBool(CharacterAnimatorParamId.IsGrounded, _character.IsGrounded);
+        }
+
+        private void PerformCombo(InputAction.CallbackContext context)
+        {
+            _animator.SetBool("Combo", true);
+            StopCombo();
+        }
+
+        private async void StopCombo()
+        {
+            int animationClipLength = (int)_comboAnimation.length;
+            Debug.Log(animationClipLength);
+            await Task.Delay(animationClipLength);
+            Debug.Log("Stop");
+            _animator.SetBool("Combo", false);
         }
     }
 }
