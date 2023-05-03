@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace BladeOfNight
 {
     public class PlayerCamera : MonoBehaviour
